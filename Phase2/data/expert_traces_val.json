@@ -1,0 +1,4946 @@
+[
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2000,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2000,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2000,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2000,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2000,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2000,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2000,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2000,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2000,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2000,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2000,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2000,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2001,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2001,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2001,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2001,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2001,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2001,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2001,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2001,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2001,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2001,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2001,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2002,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2002,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2002,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2002,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2002,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2002,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2002,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2002,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2002,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2002,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2002,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2002,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2003,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2003,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2003,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2003,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2003,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2003,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2003,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2003,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2003,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2003,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2003,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2004,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2004,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2004,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2004,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2004,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2004,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2004,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2004,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2004,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2004,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2005,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2005,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2005,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2005,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2005,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2005,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2005,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2005,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2005,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2005,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2005,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2005,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2005,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2005,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2005,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2006,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2006,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2006,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2006,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2006,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2006,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2006,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2006,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2006,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2006,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2006,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2006,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2006,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2006,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2007,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2007,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2007,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2007,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2007,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2007,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2007,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2007,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2007,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2007,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2007,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2007,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2007,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2007,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2007,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2007,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2007,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2008,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2008,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2008,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2008,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2008,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2008,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2008,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2008,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2008,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2008,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2008,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2008,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2008,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2008,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2009,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2009,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2009,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.",
+    "canonical_subgoal": "Pick up the yellow key",
+    "subgoal_tuple": [
+      "pick",
+      "yellow",
+      "key"
+    ],
+    "negatives": [
+      [
+        "Open the yellow key",
+        [
+          "open",
+          "yellow",
+          "key"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Pick up the red key",
+        [
+          "pick",
+          "red",
+          "key"
+        ]
+      ],
+      [
+        "Pick up the green key",
+        [
+          "pick",
+          "green",
+          "key"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2009,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2009,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2009,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2009,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2009,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2009,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Open the yellow door",
+    "subgoal_tuple": [
+      "open",
+      "yellow",
+      "door"
+    ],
+    "negatives": [
+      [
+        "Pick up the yellow door",
+        [
+          "pick",
+          "yellow",
+          "door"
+        ]
+      ],
+      [
+        "Go to the goal",
+        [
+          "goto",
+          "green",
+          "goal"
+        ]
+      ],
+      [
+        "Open the green door",
+        [
+          "open",
+          "green",
+          "door"
+        ]
+      ],
+      [
+        "Open the red door",
+        [
+          "open",
+          "red",
+          "door"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2009,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2009,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2009,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2009,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2009,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2009,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  },
+  {
+    "state_text": "You are carrying a yellow key. In the room, you see: yellow door, green goal.",
+    "canonical_subgoal": "Go to the goal",
+    "subgoal_tuple": [
+      "goto",
+      "green",
+      "goal"
+    ],
+    "negatives": [
+      [
+        "Pick up the goal",
+        [
+          "pick",
+          "green",
+          "goal"
+        ]
+      ]
+    ],
+    "metadata": {
+      "seed": 2009,
+      "env_id": "MiniGrid-DoorKey-6x6-v0",
+      "map_id": 0
+    }
+  }
+]
