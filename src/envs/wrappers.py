@@ -27,7 +27,7 @@ class SubgoalWrapper(gym.Wrapper):
 
     def reset(self, **kwargs):
         obs, info = self.env.reset(**kwargs)
-        # self.current_subgoal_id = 0 # Reset to NO_OP -> We want to persist subgoal for training phase if set
+        self.current_subgoal_id = 0 # Reset to NO_OP so the planner is queried
         return self._get_obs(obs), info
 
     def step(self, action):
@@ -125,6 +125,30 @@ class SubgoalWrapper(gym.Wrapper):
         elif action_type == "goto":
             # Check proximity? Or just let the PPO agent maximize reward?
             # For "Go to goal", standard reward signal handles it.
-            pass
+            # But we want intrinsic reward too.
+            target_pos = self._find_object(color, obj_type)
+            if target_pos:
+                agent_pos = tuple(self.unwrapped.agent_pos)
+                target_pos = tuple(target_pos)
 
+                # If object is a door, adjacency is enough
+                if obj_type == 'door':
+                     # Manhattan distance == 1
+                     if abs(agent_pos[0] - target_pos[0]) + abs(agent_pos[1] - target_pos[1]) <= 1:
+                         return True
+                else:
+                    # For reachable objects (goal, key, etc.), we usually go to the position
+                    if agent_pos == target_pos:
+                        return True
+            
         return False
+
+    def _find_object(self, color, obj_type):
+        # Helper to find object coordinates
+        for i in range(self.unwrapped.grid.width):
+            for j in range(self.unwrapped.grid.height):
+                cell = self.unwrapped.grid.get(i, j)
+                if cell and cell.type == obj_type:
+                    if color == "any" or cell.color == color:
+                        return (i, j)
+        return None
