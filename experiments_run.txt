@@ -1,0 +1,12 @@
+Run it on each cell in Google Colab under a GPU runtime.
+
+1. !git clone https://github.com/deepbrain-labs/language-as-memory-continual-rl.git
+2. %cd language-as-memory-continual-rl
+3. !pip install -r requirements.txt
+4. !python -m src.data_gen.generate_traces
+5. python src/data_gen/create_preference_pairs.py
+6. python src/llm/train_dpo.py --epochs 3 --load_in_4bit --output_dir results_dpo
+7. python src/experiments/evaluate_pipeline.py --model_name microsoft/phi-2
+8. python src/experiments/evaluate_pipeline.py --model_name microsoft/phi-2 --adapter_path results_dpo --num_episodes 20
+9. python src/experiments/train.py --id ppo_baseline --steps 100000
+10. python src/experiments/train.py --id dpo_baseline --steps 100000 --config configs/dpo_config.yaml
