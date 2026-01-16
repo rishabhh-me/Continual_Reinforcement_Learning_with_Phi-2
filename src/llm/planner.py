@@ -1,6 +1,6 @@
 import torch
 from abc import ABC, abstractmethod
-import random
+import os
 
 class BasePlanner(ABC):
     @abstractmethod
@@ -13,8 +13,6 @@ class MockPlanner(BasePlanner):
     """
     def __init__(self, env_id="MiniGrid-DoorKey-6x6-v0"):
         self.env_id = env_id
-        # Simple finite state machine logic for specific envs could go here
-        # or just a mapping based on keywords in the state description.
 
     def generate_subgoal(self, state_description: str) -> str:
         """
@@ -22,28 +20,74 @@ class MockPlanner(BasePlanner):
         """
         desc = state_description.lower()
 
-        # Heuristic for DoorKey
-        # 1. If carrying nothing and see key -> Pick up key
-        # 2. If carrying key and see door -> Open door
-        # 3. If door is open -> Go to goal
+        # Parse State
+        carrying = "nothing"
+        if "carrying" in desc:
+            # Example: "You are carrying a red key."
+            parts = desc.split("carrying")
+            if len(parts) > 1:
+                carrying_part = parts[1].split(".")[0].strip()
+                carrying = carrying_part
 
-        # Correctly check for carrying key vs carrying nothing
-        is_carrying_key = "carrying" in desc and "key" in desc and "carrying nothing" not in desc
-        is_carrying_nothing = "carrying nothing" in desc
+        # Check specific conditions
+        has_key = "key" in carrying
 
-        if is_carrying_key:
-            if "closed" in desc and "door" in desc:
-                # Find color of door if possible, else generic
-                return "Open the door"
-            else:
-                return "Go to the goal"
+        # Check what we see
+        # Simple string matching on the description part
+        # "In the room, you see: yellow key, yellow door, green goal."
 
-        if "key" in desc and is_carrying_nothing:
+        see_key = "key" in desc and "carrying a" not in desc
+        # Note: if we are carrying a key, "key" is in desc (in the carrying part).
+        # But we want to know if we see *another* key or the same key on the floor?
+        # Usually description separates "You are carrying..." and "You see...".
+        # Let's assume strict parsing isn't needed if we trust the context.
+        # But wait, if I carry a key, "key" is in the string.
+        # So "see_key" might be true if I carry it?
+        # Let's check if "key" appears in the "see" section.
+        see_section = ""
+        if "see:" in desc:
+            see_section = desc.split("see:")[1]
+
+        see_key_in_room = "key" in see_section
+        see_ball_in_room = "ball" in see_section
+
+        # Door logic
+        # "yellow door" -> usually closed. "open yellow door" -> open.
+        # But simply checking "door" in see_section tells us there is a door.
+        see_door = "door" in see_section
+        is_door_open = "open" in see_section and "door" in see_section
+        is_door_closed = see_door and not is_door_open
+
+        # Heuristics
+
+        # 1. Open Door if we have key and see closed door
+        if has_key and is_door_closed:
+            if "yellow" in see_section: return "Open the yellow door"
+            if "red" in see_section: return "Open the red door"
+            if "green" in see_section: return "Open the green door"
+            if "blue" in see_section: return "Open the blue door"
+            return "Open the door"
+
+        # 2. Pick up key if we see it and carry nothing
+        if see_key_in_room and "nothing" in carrying:
+            if "yellow" in see_section: return "Pick up the yellow key"
+            if "red" in see_section: return "Pick up the red key"
+            if "green" in see_section: return "Pick up the green key"
+            if "blue" in see_section: return "Pick up the blue key"
             return "Pick up the key"
 
-        if "goal" in desc:
-             return "Go to the goal"
+        # 3. Pick up ball if we see it and carry nothing (Goal for KeyCorridor/ObstructedMaze)
+        if see_ball_in_room and "nothing" in carrying:
+             if "yellow" in see_section: return "Pick up the yellow ball"
+             if "purple" in see_section: return "Pick up the purple ball"
+             if "green" in see_section: return "Pick up the green ball"
+             return "Pick up the ball"
 
+        # 4. Go to goal
+        if "goal" in see_section:
+            return "Go to the goal"
+
+        # 5. Explore if nothing else triggers
         return "Explore"
 
 class Phi2Planner(BasePlanner):
@@ -52,6 +96,7 @@ class Phi2Planner(BasePlanner):
              raise RuntimeError("Phi2Planner requires CUDA. Use MockPlanner instead.")
 
         from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+        from peft import PeftModel
 
         self.temperature = temperature
         self.max_new_tokens = max_new_tokens
@@ -67,6 +112,7 @@ class Phi2Planner(BasePlanner):
                 bnb_4bit_compute_dtype=torch.float16,
             )
 
+        print(f"Loading Base Model: {model_name}...")
         self.model = AutoModelForCausalLM.from_pretrained(
             model_name,
             quantization_config=bnb_config,
@@ -75,11 +121,16 @@ class Phi2Planner(BasePlanner):
         )
 
         if use_lora:
-            # Placeholder for loading adapters
-            pass
+            adapter_path = "artifacts/phase2/dpo_lora/"
+            if os.path.exists(adapter_path):
+                print(f"Loading LoRA Adapters from {adapter_path}...")
+                self.model = PeftModel.from_pretrained(self.model, adapter_path)
+                self.model.requires_grad_(False) # Freeze
+            else:
+                print(f"Warning: LoRA path {adapter_path} not found. Running with base model.")
 
     def generate_subgoal(self, state_description: str) -> str:
-        # Improved prompt with few-shot examples and rules
+        # Prompt construction
         prompt = (
             "Objective: Reach the goal.\n"
             "Rules:\n"
@@ -117,9 +168,6 @@ class Phi2Planner(BasePlanner):
         return subgoal
 
 def get_planner(config):
-    """
-    Factory function to return the appropriate planner.
-    """
     mock_mode = config['llm'].get('mock_mode', 'auto')
 
     use_mock = False
