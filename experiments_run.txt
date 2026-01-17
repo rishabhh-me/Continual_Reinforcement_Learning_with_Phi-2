@@ -10,3 +10,12 @@ Run it on each cell in Google Colab under a GPU runtime.
 8. python src/experiments/evaluate_pipeline.py --model_name microsoft/phi-2 --adapter_path results_dpo --num_episodes 20
 9. python src/experiments/train.py --id ppo_baseline --steps 100000
 10. python src/experiments/train.py --id dpo_baseline --steps 100000 --config configs/dpo_config.yaml
+
+-----------------------------------------------------------------------
+
+11. python src/llm/train_rlhf.py --dpo_model_dir results_dpo --reward_model_path results_rm --output_dir results_rlhf --load_in_4bit
+12. python src/experiments/evaluate_pipeline.py --model_name microsoft/phi-2 --adapter_path results_rlhf --num_episodes 20
+13. python src/llm/train_rlhf.py --dpo_model_dir results_dpo --reward_model_path results_rm --output_dir results_rlhf_low_lr --lr 5e-6 --load_in_4bit
+14. python src/experiments/evaluate_pipeline.py --model_name microsoft/phi-2 --adapter_path results_rlhf_low_lr --num_episodes 20
+15. python src/llm/train_rlhf.py --dpo_model_dir results_dpo --reward_model_path results_rm --output_dir results_rlhf_high_grad --grad_accum 4 --load_in_4bit
+16. python src/experiments/evaluate_pipeline.py --model_name microsoft/phi-2 --adapter_path results_rlhf_high_grad --num_episodes 20
