@@ -19,3 +19,11 @@ Run it on each cell in Google Colab under a GPU runtime.
 14. python src/experiments/evaluate_pipeline.py --model_name microsoft/phi-2 --adapter_path results_rlhf_low_lr --num_episodes 20
 15. python src/llm/train_rlhf.py --dpo_model_dir results_dpo --reward_model_path results_rm --output_dir results_rlhf_high_grad --grad_accum 4 --load_in_4bit
 16. python src/experiments/evaluate_pipeline.py --model_name microsoft/phi-2 --adapter_path results_rlhf_high_grad --num_episodes 20
+
+-----------------------------------------------------------------------
+
+17. python src/experiments/train_continual.py --id phase4_flat --agent flat --steps_per_task 100000
+18. python src/experiments/train_continual.py --id phase4_frozen --agent phi2 --llm_model frozen --steps_per_task 100000
+19. python src/experiments/train_continual.py --id phase4_dpo --agent phi2 --llm_model dpo --steps_per_task 100000
+20. python src/experiments/train_continual.py --id phase4_rlhf --agent phi2 --llm_model rlhf --steps_per_task 100000
+21. python src/experiments/train_continual.py --id phase4_rehearsal --agent rehearsal --llm_model dpo --steps_per_task 100000
