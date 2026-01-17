@@ -91,7 +91,7 @@ class MockPlanner(BasePlanner):
         return "Explore"
 
 class Phi2Planner(BasePlanner):
-    def __init__(self, model_name="microsoft/phi-2", load_in_4bit=True, use_lora=False, device_map="auto", temperature=0.1, max_new_tokens=50):
+    def __init__(self, model_name="microsoft/phi-2", load_in_4bit=True, use_lora=False, adapter_path=None, prompt_mode="constrained", device_map="auto", temperature=0.1, max_new_tokens=50):
         if not torch.cuda.is_available():
              raise RuntimeError("Phi2Planner requires CUDA. Use MockPlanner instead.")
 
@@ -100,6 +100,7 @@ class Phi2Planner(BasePlanner):
 
         self.temperature = temperature
         self.max_new_tokens = max_new_tokens
+        self.prompt_mode = prompt_mode
 
         self.tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
         self.tokenizer.pad_token = self.tokenizer.eos_token
@@ -121,7 +122,9 @@ class Phi2Planner(BasePlanner):
         )
 
         if use_lora:
-            adapter_path = "artifacts/phase2/dpo_lora/"
+            if adapter_path is None:
+                adapter_path = "artifacts/phase2/dpo_lora/" # Default Phase 3 path
+
             if os.path.exists(adapter_path):
                 print(f"Loading LoRA Adapters from {adapter_path}...")
                 self.model = PeftModel.from_pretrained(self.model, adapter_path)
@@ -131,21 +134,28 @@ class Phi2Planner(BasePlanner):
 
     def generate_subgoal(self, state_description: str) -> str:
         # Prompt construction
-        prompt = (
-            "Objective: Reach the goal.\n"
-            "Rules:\n"
-            "1. If you see a key and are carrying nothing, pick up the key.\n"
-            "2. If you have the key and see a door, open the door.\n"
-            "3. If the door is open, go to the goal.\n\n"
-            "Example 1:\n"
-            "Current State: You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.\n"
-            "Next Subgoal: Pick up the yellow key\n\n"
-            "Example 2:\n"
-            "Current State: You are carrying a yellow key. In the room, you see: yellow door, green goal.\n"
-            "Next Subgoal: Open the yellow door\n\n"
-            f"Current State: {state_description}\n"
-            "Next Subgoal:"
-        )
+        if self.prompt_mode == "freeform":
+            prompt = (
+                f"Current State: {state_description}\n"
+                "Next Subgoal:"
+            )
+        else:
+            # Constrained (default)
+            prompt = (
+                "Objective: Reach the goal.\n"
+                "Rules:\n"
+                "1. If you see a key and are carrying nothing, pick up the key.\n"
+                "2. If you have the key and see a door, open the door.\n"
+                "3. If the door is open, go to the goal.\n\n"
+                "Example 1:\n"
+                "Current State: You are carrying nothing. In the room, you see: yellow key, yellow door, green goal.\n"
+                "Next Subgoal: Pick up the yellow key\n\n"
+                "Example 2:\n"
+                "Current State: You are carrying a yellow key. In the room, you see: yellow door, green goal.\n"
+                "Next Subgoal: Open the yellow door\n\n"
+                f"Current State: {state_description}\n"
+                "Next Subgoal:"
+            )
 
         inputs = self.tokenizer(prompt, return_tensors="pt").to(self.model.device)
 
@@ -186,6 +196,8 @@ def get_planner(config):
             model_name=config['llm']['model_name'],
             load_in_4bit=config['llm']['load_in_4bit'],
             use_lora=config['llm']['use_lora'],
+            adapter_path=config['llm'].get('adapter_path', None),
+            prompt_mode=config['llm'].get('prompt_mode', 'constrained'),
             temperature=config['llm']['temperature'],
             max_new_tokens=config['llm']['max_new_tokens']
         )

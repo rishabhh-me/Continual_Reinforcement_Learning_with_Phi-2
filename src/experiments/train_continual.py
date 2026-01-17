@@ -41,7 +41,8 @@ class FilterMissionWrapper(gym.ObservationWrapper):
 def evaluate_agent(agent, env_id, n_episodes, seed, use_subgoals, planner=None):
     env = gym.make(env_id, render_mode="rgb_array")
     if use_subgoals:
-        env = SubgoalWrapper(env)
+        # Disable intrinsic reward during evaluation to measure true task success
+        env = SubgoalWrapper(env, use_intrinsic_reward=False)
     else:
         env = FilterMissionWrapper(env)
     
@@ -102,7 +103,27 @@ def run_continual_experiment(args):
             config['llm']['mock_mode'] = True
         elif args.agent in ['phi2', 'rehearsal']:
             config['llm']['mock_mode'] = False
-            config['llm']['use_lora'] = True # Phase 3 requirement
+
+            # Phase 4 Ablation Logic
+            if args.llm_model == 'frozen':
+                config['llm']['use_lora'] = False
+            elif args.llm_model == 'dpo':
+                config['llm']['use_lora'] = True
+                config['llm']['adapter_path'] = 'artifacts/phase2/dpo_lora/'
+            elif args.llm_model == 'rlhf':
+                config['llm']['use_lora'] = True
+                config['llm']['adapter_path'] = 'artifacts/phase2/rlhf_lora/'
+
+            if args.adapter_path:
+                config['llm']['adapter_path'] = args.adapter_path
+
+            if args.finetune_mode == 'full':
+                config['llm']['use_lora'] = False
+
+            if args.model_path:
+                config['llm']['model_name'] = args.model_path
+
+            config['llm']['prompt_mode'] = args.subgoal_mode
         
         planner = get_planner(config)
     
@@ -120,7 +141,8 @@ def run_continual_experiment(args):
         def make_env():
             e = gym.make(task_id, render_mode="rgb_array")
             if use_subgoals:
-                e = SubgoalWrapper(e)
+                use_reward = bool(args.intrinsic_reward)
+                e = SubgoalWrapper(e, use_intrinsic_reward=use_reward)
             else:
                 e = FilterMissionWrapper(e)
             e = Monitor(e)
@@ -193,6 +215,14 @@ if __name__ == "__main__":
     parser.add_argument("--eval_episodes", type=int, default=100)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--id", type=str, required=True)
+
+    # Phase 4 Ablation Arguments
+    parser.add_argument("--llm_model", type=str, choices=['frozen', 'dpo', 'rlhf'], default='dpo')
+    parser.add_argument("--intrinsic_reward", type=int, default=1, help="1 to enable, 0 to disable")
+    parser.add_argument("--subgoal_mode", type=str, choices=['constrained', 'freeform'], default='constrained')
+    parser.add_argument("--adapter_path", type=str, default=None)
+    parser.add_argument("--finetune_mode", type=str, choices=['lora', 'full'], default='lora')
+    parser.add_argument("--model_path", type=str, default=None)
     
     args = parser.parse_args()
     run_continual_experiment(args)

@@ -10,9 +10,10 @@ class SubgoalWrapper(gym.Wrapper):
     2. Provide textual description of state.
     3. Detect subgoal completion (placeholder logic).
     """
-    def __init__(self, env):
+    def __init__(self, env, use_intrinsic_reward=True):
         super().__init__(env)
 
+        self.use_intrinsic_reward = use_intrinsic_reward
         # Current subgoal (tuple and ID)
         self.current_subgoal_tuple = ("no_op", "none", "none")
         self.current_subgoal_id = 0
@@ -39,7 +40,7 @@ class SubgoalWrapper(gym.Wrapper):
         is_complete = self._check_subgoal_completion(obs)
         info['subgoal_completed'] = is_complete
 
-        if is_complete:
+        if is_complete and self.use_intrinsic_reward:
             reward += 1.0  # Intrinsic reward for completing the subgoal
 
         return self._get_obs(obs), reward, terminated, truncated, info
