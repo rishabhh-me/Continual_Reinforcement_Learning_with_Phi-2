@@ -2,6 +2,8 @@ import gymnasium as gym
 import numpy as np
 from stable_baselines3 import PPO
 from copy import deepcopy
+import pickle
+import os
 
 class RehearsalPPO(PPO):
     """
@@ -12,6 +14,11 @@ class RehearsalPPO(PPO):
         super().__init__(*args, **kwargs)
         self.replay_storage = [] 
         self.rehearsal_fraction = 0.3
+
+    def clear_rehearsal_data(self):
+        """Clears the rehearsal storage."""
+        self.replay_storage = []
+        print("Rehearsal storage cleared.")
 
     def cache_current_task_data(self):
         """
@@ -36,6 +43,32 @@ class RehearsalPPO(PPO):
         self.replay_storage.append(cached_data)
         # Reset buffer again so it's clean for next use (though train loop usually handles fill->train->reset)
         self.rollout_buffer.reset()
+
+    def load_rehearsal_data(self, path):
+        """
+        Loads rehearsal data from a pickle file and adds it to storage.
+        """
+        if not os.path.exists(path):
+            print(f"Warning: Rehearsal data {path} not found.")
+            return
+
+        print(f"Loading rehearsal data from {path}...")
+        try:
+            with open(path, 'rb') as f:
+                data = pickle.load(f)
+
+            # Validate keys
+            required_keys = ['observations', 'actions', 'old_log_prob', 'advantages', 'returns', 'values']
+            for k in required_keys:
+                if k not in data:
+                    print(f"Error: Rehearsal data missing key {k}")
+                    return
+
+            self.replay_storage.append(data)
+            print(f"Loaded {data['actions'].shape[0]} steps.")
+
+        except Exception as e:
+            print(f"Error loading rehearsal data: {e}")
 
     def train(self):
         if len(self.replay_storage) > 0:

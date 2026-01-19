@@ -19,6 +19,7 @@ from src.envs.wrappers import SubgoalWrapper
 from src.ppo.sb3_agent import create_agent
 from src.utils.seeding import set_global_seeds
 from src.utils.callbacks import SubgoalUpdateCallback
+from src.data_gen.gen_continual_traces import generate_synthetic_data
 
 TASKS = [
     'MiniGrid-DoorKey-6x6-v0',
@@ -134,6 +135,8 @@ def run_continual_experiment(args):
     base_save_path = f"experiments/runs/{args.id}/seed_{args.seed}"
     os.makedirs(base_save_path, exist_ok=True)
     
+    global_subgoals = set()
+
     for task_idx, task_id in enumerate(TASKS):
         print(f"\n=== Starting Task {task_idx}: {task_id} ===")
         
@@ -160,11 +163,24 @@ def run_continual_experiment(args):
             # SB3 PPO reset() is handled internally? 
             # We assume agent.learn() calls collect_rollouts which resets buffer.
             pass
+
+        # Phase 5: Load Synthetic Rehearsal Data
+        if args.use_synthetic_rehearsal and args.agent == 'rehearsal':
+            # Clear old data to prevent duplication as we reload all previous tasks
+            agent.clear_rehearsal_data()
+
+            for prev_idx in range(task_idx):
+                prev_task_id = TASKS[prev_idx]
+                data_path = f"{base_save_path}/task_{prev_idx}_{prev_task_id}/synthetic_data.pkl"
+                if os.path.exists(data_path):
+                    agent.load_rehearsal_data(data_path)
             
         # Callbacks
         callbacks = []
+        subgoal_callback = None
         if use_subgoals:
-            callbacks.append(SubgoalUpdateCallback(planner, verbose=0))
+            subgoal_callback = SubgoalUpdateCallback(planner, previously_seen_subgoals=global_subgoals, verbose=0)
+            callbacks.append(subgoal_callback)
             
         # Train
         steps = args.steps_per_task
@@ -173,19 +189,34 @@ def run_continual_experiment(args):
         
         # Cache Rehearsal Data
         if args.agent == 'rehearsal':
-            agent.cache_current_task_data()
+            if args.use_synthetic_rehearsal:
+                # Generate new synthetic data
+                data_path = f"{base_save_path}/task_{task_idx}_{task_id}/synthetic_data.pkl"
+                generate_synthetic_data(agent, env, steps=args.synthetic_steps, output_path=data_path, planner=planner)
+            else:
+                # Use default cache
+                agent.cache_current_task_data()
             
         # Save
         ckpt_path = f"{base_save_path}/task_{task_idx}_{task_id}/model"
         agent.save(ckpt_path)
         print(f"Model saved to {ckpt_path}")
-        
+
+        # Metrics: Subgoal Reuse
+        if subgoal_callback:
+            global_subgoals.update(subgoal_callback.current_task_subgoals)
+
         # Evaluation Loop (Forgetting)
         print("Evaluating on all seen tasks...")
         current_results = {
             'train_task': task_id,
             'train_idx': task_idx,
         }
+
+        if subgoal_callback:
+            current_results['subgoal_reuse_count'] = subgoal_callback.reused_generation_count
+            current_results['subgoal_unique_count'] = len(subgoal_callback.current_task_subgoals)
+            current_results['total_subgoals_generated'] = subgoal_callback.total_subgoals
         
         for eval_idx, eval_task in enumerate(TASKS[:task_idx+1]):
             print(f"  Evaluating {eval_task}...")
@@ -223,6 +254,10 @@ if __name__ == "__main__":
     parser.add_argument("--adapter_path", type=str, default=None)
     parser.add_argument("--finetune_mode", type=str, choices=['lora', 'full'], default='lora')
     parser.add_argument("--model_path", type=str, default=None)
+
+    # Phase 5 Arguments
+    parser.add_argument("--use_synthetic_rehearsal", action="store_true", help="Enable Phase 5 LLM-driven synthetic rehearsal")
+    parser.add_argument("--synthetic_steps", type=int, default=10000, help="Number of synthetic steps to generate per task")
     
     args = parser.parse_args()
     run_continual_experiment(args)

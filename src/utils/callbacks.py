@@ -3,11 +3,17 @@ from src.utils.subgoal_parser import parse_subgoal
 from src.envs.wrappers import SubgoalWrapper
 
 class SubgoalUpdateCallback(BaseCallback):
-    def __init__(self, planner, verbose=0):
+    def __init__(self, planner, previously_seen_subgoals=None, verbose=0):
         super(SubgoalUpdateCallback, self).__init__(verbose)
         self.planner = planner
         self.subgoal_successes = 0
         self.total_subgoals = 0
+
+        # Phase 5: Subgoal Reuse Tracking
+        # previously_seen_subgoals: set of canonical subgoal tuples seen in prior tasks
+        self.previously_seen_subgoals = previously_seen_subgoals if previously_seen_subgoals is not None else set()
+        self.current_task_subgoals = set() # Unique subgoals seen in this task
+        self.reused_generation_count = 0 # How many times we generated a subgoal that was seen in previous tasks
 
     def _on_step(self) -> bool:
         infos = self.locals['infos']
@@ -44,5 +50,11 @@ class SubgoalUpdateCallback(BaseCallback):
                     
                     env_wrapper.set_subgoal(subgoal_tuple, subgoal_id)
                     self.total_subgoals += 1
+
+                    # Track Reuse
+                    if subgoal_tuple in self.previously_seen_subgoals:
+                        self.reused_generation_count += 1
+
+                    self.current_task_subgoals.add(subgoal_tuple)
             
         return True
