@@ -30,25 +30,35 @@ class SubgoalUpdateCallback(BaseCallback):
             
             # Access wrapper
             env_wrapper = self.training_env.envs[i]
-            # Unwrap if needed
-            while hasattr(env_wrapper, 'env'):
-                if isinstance(env_wrapper, SubgoalWrapper):
+
+            # Find the wrapper that handles subgoals (has current_subgoal_id)
+            # We search top-down to find the outermost wrapper that supports it (e.g. NoiseWrapper delegating)
+            target_wrapper = None
+            temp_wrapper = env_wrapper
+
+            while True:
+                if hasattr(temp_wrapper, 'current_subgoal_id'):
+                    target_wrapper = temp_wrapper
                     break
-                env_wrapper = env_wrapper.env
+                if hasattr(temp_wrapper, 'env'):
+                    temp_wrapper = temp_wrapper.env
+                else:
+                    break
             
-            if isinstance(env_wrapper, SubgoalWrapper):
-                if env_wrapper.current_subgoal_id == 0: # NO_OP
+            if target_wrapper is not None:
+                if target_wrapper.current_subgoal_id == 0: # NO_OP
                     needs_update = True
                 
                 if needs_update:
-                    state_text = env_wrapper.get_text_description()
+                    # Use the wrapper's get_text_description (supports noise if wrapped)
+                    state_text = target_wrapper.get_text_description()
                     subgoal_text = self.planner.generate_subgoal(state_text)
                     subgoal_tuple, subgoal_id = parse_subgoal(subgoal_text)
                     
                     if self.verbose > 0:
                         print(f"Env {i}: New Subgoal: {subgoal_text} -> {subgoal_tuple}")
                     
-                    env_wrapper.set_subgoal(subgoal_tuple, subgoal_id)
+                    target_wrapper.set_subgoal(subgoal_tuple, subgoal_id)
                     self.total_subgoals += 1
                     
                     # Track Reuse

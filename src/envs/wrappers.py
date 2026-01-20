@@ -153,3 +153,12 @@ class SubgoalWrapper(gym.Wrapper):
                     if color == "any" or cell.color == color:
                         return (i, j)
         return None
+class FilterMissionWrapper(gym.ObservationWrapper):
+    def __init__(self, env):
+        super().__init__(env)
+        # Filter out mission which is Text space and breaks SB3 DummyVecEnv
+        new_spaces = {k: v for k, v in env.observation_space.spaces.items() if k != 'mission'}
+        self.observation_space = gym.spaces.Dict(new_spaces)
+
+    def observation(self, obs):
+        return {k: v for k, v in obs.items() if k != 'mission'}

@@ -15,11 +15,12 @@ sys.path.append(os.path.abspath("."))
 from src.utils.logger import ExperimentLogger
 from src.utils.subgoal_parser import parse_subgoal
 from src.llm.planner import get_planner
-from src.envs.wrappers import SubgoalWrapper
+from src.envs.wrappers import SubgoalWrapper, FilterMissionWrapper
 from src.ppo.sb3_agent import create_agent
 from src.utils.seeding import set_global_seeds
 from src.utils.callbacks import SubgoalUpdateCallback
 from src.data_gen.gen_continual_traces import generate_synthetic_data
+from src.utils.evaluation import evaluate_agent
 
 TASKS = [
     'MiniGrid-DoorKey-6x6-v0',
@@ -28,60 +29,6 @@ TASKS = [
     'MiniGrid-KeyCorridorS3R1-v0',
     'MiniGrid-ObstructedMaze-2Dlh-v0'
 ]
-
-class FilterMissionWrapper(gym.ObservationWrapper):
-    def __init__(self, env):
-        super().__init__(env)
-        # Filter out mission which is Text space and breaks SB3 DummyVecEnv
-        new_spaces = {k: v for k, v in env.observation_space.spaces.items() if k != 'mission'}
-        self.observation_space = gym.spaces.Dict(new_spaces)
-    
-    def observation(self, obs):
-        return {k: v for k, v in obs.items() if k != 'mission'}
-
-def evaluate_agent(agent, env_id, n_episodes, seed, use_subgoals, planner=None):
-    env = gym.make(env_id, render_mode="rgb_array")
-    if use_subgoals:
-        # Disable intrinsic reward during evaluation to measure true task success
-        env = SubgoalWrapper(env, use_intrinsic_reward=False)
-    else:
-        env = FilterMissionWrapper(env)
-    
-    successes = 0
-    rewards = []
-    
-    for i in range(n_episodes):
-        obs, _ = env.reset(seed=seed+i)
-        
-        # Initial Subgoal
-        if use_subgoals and planner:
-             desc = env.get_text_description()
-             sub_text = planner.generate_subgoal(desc)
-             sub_tuple, sub_id = parse_subgoal(sub_text)
-             env.set_subgoal(sub_tuple, sub_id)
-             obs['subgoal'] = np.array([sub_id], dtype=np.int32)
-             
-        done = False
-        truncated = False
-        episode_reward = 0
-        
-        while not (done or truncated):
-            action, _ = agent.predict(obs, deterministic=True)
-            obs, reward, done, truncated, info = env.step(action)
-            episode_reward += reward
-            
-            if use_subgoals and planner:
-                if info.get('subgoal_completed', False) or env.current_subgoal_id == 0:
-                     desc = env.get_text_description()
-                     sub_text = planner.generate_subgoal(desc)
-                     sub_tuple, sub_id = parse_subgoal(sub_text)
-                     env.set_subgoal(sub_tuple, sub_id)
-                     obs['subgoal'][0] = sub_id
-
-        rewards.append(episode_reward)
-        if episode_reward > 0: successes += 1
-    
-    return successes / n_episodes
 
 def run_continual_experiment(args):
     # Load Config
