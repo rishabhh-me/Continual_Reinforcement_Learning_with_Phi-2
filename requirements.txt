@@ -12,3 +12,4 @@ trl
 tensorboard
 pyyaml
 protobuf==4.25.8
+sentence-transformers

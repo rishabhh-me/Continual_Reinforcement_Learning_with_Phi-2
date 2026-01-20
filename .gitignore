@@ -13,4 +13,4 @@ pip-delete-this-directory.txt
 .vscode/
 *.log
 experiments/runs/
-.DS_Store
+.DS_Storeanalysis_output/
